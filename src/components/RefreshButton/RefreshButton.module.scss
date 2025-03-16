@@ -1,0 +1,55 @@
+$default-background-color: #eb0237;
+$active-background-color: #a01131;
+$disabled-background-color: #701328;
+
+.refreshButton {
+    background-color: $default-background-color;
+    border-radius: 4px;
+    height: 56px;
+    width: 204px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 600;
+
+    transition: 100ms;
+    cursor: pointer;
+
+    p {
+        user-select: none;
+    }
+
+    &:active {
+        background-color: $active-background-color;
+    }
+
+    &:disabled {
+        background-color: $disabled-background-color;
+    }
+}
+
+.refreshImage {
+    width: 24px;
+    height: 24px;
+}
+
+.spinning {
+    animation: animation 0.7s infinite;
+
+    @keyframes animation {
+        from {
+            transform: rotateZ(0deg);
+        }
+
+        to {
+            transform: rotateZ(360deg);
+        }
+    }
+}

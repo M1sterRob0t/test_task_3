@@ -1,0 +1,20 @@
+$body-background-color: #090909;
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    border-style: solid;
+    border-width: 0px;
+    color: #ffffff;
+    user-select: none;
+}
+
+p {
+    user-select: text;
+}
+
+body {
+    background-color: #090909;
+}

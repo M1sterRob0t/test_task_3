@@ -1,0 +1,65 @@
+$default-background-color: #0b0e12;
+$hover-background-color: #0f1318;
+$active-border-color: #171d25;
+
+.dropList {
+    box-sizing: border-box;
+    margin: 0.5rem;
+    height: 56px;
+    width: 170px;
+    position: relative;
+
+    border-radius: 4px;
+    background-color: $default-background-color;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+    border-color: $active-border-color;
+    user-select: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    transition: 300ms ease-out;
+
+    &:hover {
+        background-color: $hover-background-color;
+    }
+
+    &:active {
+        background-color: $default-background-color;
+
+        border-width: 1px;
+    }
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    transition: 100ms;
+}
+
+.itemsContainer {
+    position: absolute;
+    overflow: hidden;
+    bottom: -6px;
+    left: 0px;
+    right: 0px;
+    transform: translateY(100%);
+    transition: 100ms;
+}
+
+.itemsContainerInner {
+    padding: 6px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    box-shadow: 0px 2px 4px #0d101359;
+    background-color: $hover-background-color;
+    border-radius: 4px;
+}
